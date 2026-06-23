@@ -1,24 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
 }
 
 .container{
-    width:400px;
-    margin:50px auto;
-    background:white;
+    width:100%;
+    max-width:700px;
     padding:20px;
-    border-radius:10px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+    color:#333;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
 input{
-    width:100%;
-    padding:10px;
-    margin:8px 0;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#667eea;
 }
 
 button{
-    width:100%;
-    padding:10px;
+    grid-column:span 2;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#667eea;
+    color:white;
+    font-size:16px;
+    font-weight:600;
     cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+@media(max-width:600px){
+
+    form{
+        grid-template-columns:1fr;
+    }
+
+    button{
+        grid-column:span 1;
+    }
+}
+
+.probability-box{
+    margin:25px 0;
+    text-align:center;
+    padding:20px;
+    background:#f5f7ff;
+    border-radius:12px;
+}
+
+.probability-box h3{
+    color:#444;
+    margin-bottom:10px;
+}
+
+.probability-box p{
+    font-size:32px;
+    font-weight:bold;
+    color:#667eea;
+}
+
+.btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#667eea;
+    color:white;
+    padding:14px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    height:15px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:#667eea;
 }

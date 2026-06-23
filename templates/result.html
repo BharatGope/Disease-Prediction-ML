@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
+    <title>Prediction Result</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
-<h1>Prediction Result</h1>
+<div class="container">
+    <div class="card">
 
-<h2>{{ prediction }}</h2>
+        <h1>🩺 Prediction Result</h1>
 
-<a href="/">Try Again</a>
+        {% if prediction == "Diabetic" %}
+            <h2 style="color:red;text-align:center;">
+                {{ prediction }}
+            </h2>
+        {% else %}
+            <h2 style="color:green;text-align:center;">
+                {{ prediction }}
+            </h2>
+        {% endif %}
+
+        <div class="probability-box">
+            <h3>Confidence Score</h3>
+            <p>{{ probability }}%</p>
+
+            <div class="progress">
+                <div class="progress-fill"
+                    style="width: {{ probability }}%;">
+                </div>
+            </div>
+        </div>
+
+        <a class="btn" href="/">
+            Predict Again
+        </a>
+
+    </div>
+</div>
 
 </body>
 </html>

@@ -11,6 +11,8 @@ def home():
     return render_template("index.html")
 
 @app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
+
 def predict():
 
     values = [
@@ -26,11 +28,17 @@ def predict():
 
     prediction = model.predict([values])[0]
 
+    probability = round(
+        max(model.predict_proba([values])[0]) * 100,
+        2
+    )
+
     result = "Diabetic" if prediction == 1 else "Not Diabetic"
 
     return render_template(
         "result.html",
-        prediction=result
+        prediction=result,
+        probability=probability
     )
 
 if __name__ == "__main__":
