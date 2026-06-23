@@ -1,0 +1,53 @@
+DIABETES PREDICTION SYSTEM - SAMPLE TEST DATA
+
+--------------------------------------------------
+LOW RISK / LIKELY NOT DIABETIC
+--------------------------------------------------
+Pregnancies: 1
+Glucose: 85
+Blood Pressure: 70
+Skin Thickness: 20
+Insulin: 79
+BMI: 24.5
+Diabetes Pedigree Function: 0.2
+Age: 25
+
+--------------------------------------------------
+MEDIUM RISK
+--------------------------------------------------
+Pregnancies: 3
+Glucose: 130
+Blood Pressure: 80
+Skin Thickness: 25
+Insulin: 120
+BMI: 30.0
+Diabetes Pedigree Function: 0.5
+Age: 35
+
+--------------------------------------------------
+HIGH RISK / LIKELY DIABETIC
+--------------------------------------------------
+Pregnancies: 8
+Glucose: 180
+Blood Pressure: 90
+Skin Thickness: 35
+Insulin: 250
+BMI: 38.5
+Diabetes Pedigree Function: 1.2
+Age: 55
+
+--------------------------------------------------
+VERY HIGH RISK
+--------------------------------------------------
+Pregnancies: 12
+Glucose: 220
+Blood Pressure: 100
+Skin Thickness: 45
+Insulin: 400
+BMI: 45.0
+Diabetes Pedigree Function: 2.0
+Age: 65
+
+NOTE:
+This model is trained on the Pima Indians Diabetes Dataset,
+which contains female patient data. 
