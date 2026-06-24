@@ -7,39 +7,41 @@
 </head>
 
 <body>
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
 
-<div class="container">
-    <div class="card">
-
-        <h1>🩺 Prediction Result</h1>
-
-        {% if prediction == "Diabetic" %}
-            <h2 style="color:red;text-align:center;">
-                {{ prediction }}
-            </h2>
-        {% else %}
-            <h2 style="color:green;text-align:center;">
-                {{ prediction }}
-            </h2>   
-        {% endif %}
-
-        <div class="probability-box">
-            <h3>Model Confidence</h3>
-            <p>{{ probability }}%</p>
-
-            <div class="progress">
-                <div class="progress-fill"
-                    style="width: {{ probability }}%;">
+    <div class="container">
+        <div class="card">
+        
+            <h1>🩺 Prediction Result</h1>
+        
+            {% if prediction == "Diabetic" %}
+                <h2 style="color:red;text-align:center;">
+                    {{ prediction }}
+                </h2>
+            {% else %}
+                <h2 style="color:green;text-align:center;">
+                    {{ prediction }}
+                </h2>   
+            {% endif %}
+            
+            <div class="probability-box">
+                <h3>Model Confidence</h3>
+                <p>{{ probability }}%</p>
+            
+                <div class="progress">
+                    <div class="progress-fill"
+                        style="width: {{ probability }}%;">
+                    </div>
                 </div>
             </div>
+        
+            <a class="btn" href="/">
+                Predict Again
+            </a>
+        
         </div>
-
-        <a class="btn" href="/">
-            Predict Again
-        </a>
-
     </div>
-</div>
 
 </body>
 </html>
